@@ -1,0 +1,242 @@
+/*SYSTEMS*/
+
+//#Type
+
+//##Font sizes
+
+//Primary:16px
+
+//##Font weights
+$regular: 500;
+$bold: 800;
+
+//#Responsive-sizes
+$sc-desktop: 90em;
+$sc-mobile: 37.5em;
+
+/*CSS VARIABLES*/
+
+//#Primary-Colors
+$color-primary-red: hsl(1, 90%, 64%);
+$color-primary-blue: hsl(219, 85%, 26%);
+
+//#Neutral-Colors
+$grayish-blue-lighter: #f7fafd;
+$grayish-blue-light-1: #e5effa;
+$grayish-blue-light-2: #dde7ee;
+$grayish-blue: #939dae;
+$grayish-blue-dark: #5e6778;
+$grayish-blue-darker: #1c202b;
+
+//FONT//
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+//RESET//
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans";
+  font-size: 1.6rem;
+  font-weight: $regular;
+  line-height: 1.6;
+  color: $grayish-blue-darker;
+}
+
+//Attribution//
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 5rem 0;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+//Container//
+.container {
+  background-color: $grayish-blue-lighter;
+  padding: 5rem;
+
+  @media (max-width: $sc-mobile) {
+    padding: 0;
+    height: 100vh;
+  }
+}
+
+//Notifications-body//
+.notifications {
+  background-color: #fff;
+  max-width: 100rem;
+
+  margin: 0 auto;
+  padding: 2rem 4rem 0 4rem;
+
+  border-radius: 2rem;
+
+  box-shadow: 0 0 5rem 0.1rem rgba(0, 0, 0, 0.05);
+
+  //Header
+  &__top {
+    margin: 2rem 0 4rem 0;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: $bold;
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3.5rem;
+    height: 3rem;
+
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: $bold;
+
+    background-color: $color-primary-blue;
+    border-radius: 0.5rem;
+  }
+
+  &__btn {
+    font-size: 1.6rem;
+    font-weight: $regular;
+    text-decoration: none;
+    color: $grayish-blue-dark;
+    border: none;
+    background-color: inherit;
+    margin-left: auto;
+
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-primary-blue;
+      cursor: pointer;
+    }
+  }
+
+  //Notification cards container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+}
+
+//Notification card body//
+.notification__card {
+  display: flex;
+  gap: 2rem;
+
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  //Unread notification card
+  &.unread {
+    background-color: $grayish-blue-lighter;
+    box-shadow: 0 0 3px 1px $grayish-blue-light-1;
+
+    .card__unread-dot {
+      display: inline-block;
+      margin-left: 0.2rem;
+
+      font-size: 2rem;
+      line-height: 0;
+      color: $color-primary-red;
+
+      visibility: visible;
+    }
+  }
+
+  //Card content
+  .card {
+    &__user-image {
+      align-self: flex-start;
+      width: 5rem;
+      height: 5rem;
+    }
+
+    &__body {
+      .link {
+        transition: color 0.2s;
+        &:link,
+        &:visited {
+          text-decoration: none;
+          font-weight: $bold;
+        }
+
+        &:hover,
+        &:active {
+          color: $color-primary-blue;
+        }
+      }
+    }
+
+    &__username {
+      color: inherit;
+    }
+
+    &__label,
+    &__link {
+      color: $grayish-blue-dark;
+    }
+
+    &__unread-dot {
+      visibility: hidden;
+    }
+
+    &__timestamp {
+      color: $grayish-blue;
+    }
+
+    &__message {
+      padding: 2rem;
+      box-shadow: 0 0 1px 1px $grayish-blue-light-2;
+      color: $grayish-blue-dark;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+
+      transition: background-color 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $grayish-blue-light-1;
+      }
+    }
+
+    &__picture {
+      margin-left: auto;
+      align-self: flex-start;
+
+      img {
+        width: 5rem;
+        border-radius: 1rem;
+        transition: box-shadow 0.1s;
+      }
+
+      &:hover img {
+        cursor: pointer;
+        box-shadow: 0 0 1px 2px $grayish-blue-light-2;
+      }
+    }
+  }
+}

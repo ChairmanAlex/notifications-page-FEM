@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/images/favicon-32x32.png"
+    />
+    <link href="./src/sass/style.scss" rel="stylesheet" />
+    <script defer src="./src/js/main.js" type="module"></script>
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    
+    <div class="container">
+      <main class="notifications">
+        <div class="notifications__top">
+          <h2 class="notifications__heading">Notifications</h2>
+          <p class="notifications__count">3</p>
+          <button class="notifications__btn">Mark all as read</button>
+        </div>
+        <div class="notifications__container">
+          <figure class="notification__card unread">
+            <img
+              class="card__user-image"
+              src="./src/assets/images/avatar-mark-webber.webp"
+              alt="The picture of the user."
+            />
+            <div class="card__body">
+              <p class="card__text">
+                <a href="#" class="link card__username"
+                  >Mark Webber&nbsp;
+                </a>
+                <span class="card__label">
+                  reacted to your recent post
+                </span>
+                <a href="#" class="link card__link">
+                  &nbsp;My first tournament today!</a
+                >
+                <span class="card__unread-dot">&#8226;</span>
+              </p>
+              <p class="card__timestamp">1m ago</p>
+            </div> 
+          </figure>
+          <figure class="notification__card unread">
+            <img
+              class="card__user-image"
+              src="./src/assets/images/avatar-angela-gray.webp"
+              alt="The picture of the user."
+            />
+            <div class="card__body">
+              <p class="card__text">
+                <a href="#" class="link card__username"
+                  >Angela Gray&nbsp;
+                </a>
+                <span class="card__label">
+                  followed you
+                </span>
+                <span class="card__unread-dot">&#8226;</span>
+              </p>
+              <p class="card__timestamp">5m ago</p>
+          </figure>
+          <figure class="notification__card unread">
+            <img
+              class="card__user-image"
+              src="./src/assets/images/avatar-jacob-thompson.webp"
+              alt="The picture of the user."
+            />
+            <div class="card__body">
+              <p class="card__text">
+                <a href="#" class="link card__username"
+                  >Jacob Thompson&nbsp;
+                </a>
+                <span class="card__label">
+                  has joined your group
+                </span>
+                <a href="#" class="link card__link">
+                  &nbsp;Chess Club</a
+                >
+                <span class="card__unread-dot">&#8226;</span>
+              </p>
+              <p class="card__timestamp">1 day ago</p>
+          </figure>
+          <figure class="notification__card">
+            <img
+              class="card__user-image"
+              src="./src/assets/images/avatar-rizky-hasanuddin.webp"
+              alt="The picture of the user."
+            />
+            <div class="card__body">
+              <p class="card__text">
+                <a href="#" class="link card__username"
+                  >Rizky Hasanuddin&nbsp;
+                </a>
+                <span class="card__label">
+                  sent you a private message
+                </span>
+              </p>
+              <p class="card__timestamp">5 days ago</p>
+              <div class="card__message">
+                <p>
+                  Hello, thanks for setting up the Chess Club. I've been a
+                  member for a few weeks now and I'm already having lots of fun
+                  and improving my game.
+                </p>
+              </div>
+          </figure>
+          <figure class="notification__card">
+            <img
+              class="card__user-image"
+              src="./src/assets/images/avatar-kimberly-smith.webp"
+              alt="The picture of the user."
+            />
+            <div class="card__body">
+              <p class="card__text">
+                <a href="#" class="link card__username"
+                  >Kimberly Smith&nbsp;
+                </a>
+                <span class="card__label">
+                  commented on your picture
+                </span>
+              </p>
+              <p class="card__timestamp">1 week ago</p>
+              </div>
+              <a href="#" class="card__picture">
+                <img alt="Thumbnail of the picture the user posted" src="./src/assets/images/image-chess.webp" />
+              </a>
+          </figure>
+          <figure class="notification__card">
+            <img
+              class="card__user-image"
+              src="./src/assets/images/avatar-nathan-peterson.webp"
+              alt="The picture of the user."
+            />
+            <div class="card__body">
+              <p class="card__text">
+                <a href="#" class="link card__username"
+                  >Nathan Peterson&nbsp;
+                </a>
+                <span class="card__label">
+                  reacted to your recent post
+                </span>
+                <a href="#" class="link card__link">
+                  &nbsp;5 end-game strategies to increase your win rate</a
+                >
+              </p>
+              <p class="card__timestamp">2 weeks ago</p>
+          </figure>
+          <figure class="notification__card">
+            <img
+              class="card__user-image"
+              src="./src/assets/images/avatar-anna-kim.webp"
+              alt="The picture of the user."
+            />
+            <div class="card__body">
+              <p class="card__text">
+                <a href="#" class="link card__username"
+                  >Anna Kim&nbsp;
+                </a>
+                <span class="card__label">
+                  left the group
+                </span>
+                <a href="#" class="link card__link">
+                  &nbsp;Chess Club</a
+                >
+              </p>
+              <p class="card__timestamp">2 weeks ago</p>
+          </figure>
+        </div>
+      </main>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://github.com/ChairmanAlex" target="_blank">ChairmanAlex/a>.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

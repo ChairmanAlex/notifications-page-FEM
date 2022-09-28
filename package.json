@@ -1,0 +1,26 @@
+{
+  "name": "notification-pack",
+  "version": "1.0.0",
+  "description": "package for bundling purposes",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChairmanAlex/notifications-page-FEM"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "ChairmanAlex",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "parcel": "^2.7.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0"
+  }
+}
