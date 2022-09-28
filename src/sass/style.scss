@@ -195,6 +195,10 @@ body {
       color: inherit;
     }
 
+    &__label {
+      margin: 0 0.2rem;
+    }
+
     &__label,
     &__link {
       color: $grayish-blue-dark;
